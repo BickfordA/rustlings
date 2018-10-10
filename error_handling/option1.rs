@@ -10,33 +10,18 @@ fn main() {
     let last = list.pop().unwrap();
     println!("The last item in the list is {:?}", last);
 
-    let second_to_last = list.pop().unwrap();
-    println!("The second-to-last item in the list is {:?}", second_to_last);
+    let second_to_last = match list.pop() {
+        Some(next) => next,
+        None => {
+            println!("No items left in the list");
+            return;
+        }
+    };
+    println!(
+        "The second-to-last item in the list is {:?}",
+        second_to_last
+    );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Try using a `match` statement where the arms are `Some(thing)` and `None`.
 // Or set a default value to print out if you get `None` by using the

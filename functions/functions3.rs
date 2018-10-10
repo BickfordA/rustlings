@@ -2,7 +2,8 @@
 // Make me compile! Scroll down for hints :)
 
 fn main() {
-    call_me();
+    let maybe = 20;
+    call_me(maybe);
 }
 
 fn call_me(num: i32) {
